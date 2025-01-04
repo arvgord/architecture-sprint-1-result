@@ -64,8 +64,12 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "cards",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      exposes: {
+        "./AddPlacePopup": "./src/components/AddPlacePopup",
+        "./Card": "./src/components/Card",
+        "./ImagePopup": "./src/components/ImagePopup",
+        "./PopupWithForm": "./src/components/PopupWithForm",
+      },
       shared: {
         ...deps,
         react: {

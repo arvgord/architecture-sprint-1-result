@@ -64,8 +64,11 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "profile",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      exposes: {
+        "./EditAvatarPopup": "./src/components/EditAvatarPopup",
+        "./EditProfilePopup": "./src/components/EditProfilePopup",
+        "./PopupWithForm": "./src/components/PopupWithForm",
+      },
       shared: {
         ...deps,
         react: {

@@ -64,8 +64,11 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "auth",
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
+      exposes: {
+        "./InfoTooltip": "./src/components/InfoTooltip",
+        "./Login": "./src/components/Login",
+        "./Register": "./src/components/Register",
+      },
       shared: {
         ...deps,
         react: {
