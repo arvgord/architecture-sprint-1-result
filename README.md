@@ -79,6 +79,7 @@ frontend/
 │   │   │   ├── Login.js
 │   │   │   └── Register.js
 │   │   └── index.js
+│   ├── package.json
 │   └── webpack.config.js
 ├── cards/                       # Микрофронтенд для управления карточками
 │   ├── src/
@@ -88,6 +89,7 @@ frontend/
 │   │   │   ├── ImagePopup.js
 │   │   │   └── PopupWithForm.js
 │   │   └── index.js
+│   ├── package.json
 │   └── webpack.config.js
 ├── host/                        # Хост-приложение
 │   ├── src/
@@ -98,6 +100,7 @@ frontend/
 │   │   │   ├── Main.js
 │   │   │   └── ProtectedRoute.js
 │   │   └── index.js
+│   ├── package.json
 │   └── webpack.config.js
 ├── profile/                     # Микрофронтенд для профиля
 │   ├── src/
@@ -106,6 +109,16 @@ frontend/
 │   │   │   ├── EditAvatarPopup.js
 │   │   │   └── PopupWithForm.js
 │   │   └── index.js
+│   ├── package.json
 │   └── webpack.config.js
-└── .gitignore
+├── package.json
+└── package-lock.json
+```
+
+### Запуск
+
+```bash
+cd .\frontend\
+npm run install-all
+npm run start
 ```

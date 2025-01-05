@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "auth",
+    "cards",
+    "host",
+    "profile"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "start": "concurrently \"npm:start --workspace=auth\" \"npm:start --workspace=cards\" \"npm:start --workspace=profile\" \"npm:start --workspace=host\"",
+    "build": "npm run build --workspaces",
+    "clean": "npm run clean --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
